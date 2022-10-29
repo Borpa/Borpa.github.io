@@ -1,9 +1,14 @@
 <!doctype html>
 <html lang="en">
 	<head>	
-        <title>Find your favorite recipes</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script>
+			console.time("DOM");
+           		console.time("load");
+		</script>
+		
+        	<title>Find your favorite recipes</title>
+        	<meta name="viewport" content="width=device-width, initial-scale=1">
+       		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 		<link rel="stylesheet" type="text/css"
             href="./css/main_style.css"
@@ -198,6 +203,18 @@
             <div class="credits">
                 <p> DESIGN BY: WWW.BEKADES.COM </p>
             </div>
-        </footer>      
+        </footer>
+	    
+	<script>
+            document.addEventListener("DOMContentLoaded", () => {
+                console.timeEnd("DOM");
+            });
+        </script>
+
+        <script>
+            window.addEventListener('load', function() {
+                console.timeEnd("load");
+            });
+        </script>
     </body>
 </html>
