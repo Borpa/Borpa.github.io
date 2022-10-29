@@ -1,6 +1,12 @@
 <!doctype html>
 <html lang="en">
 	<head>
+	<script type="text/javascript">
+	    console.time("DOM");
+            console.time("load");
+	</script>	
+		
+		
         <title>Find your favorite recipes</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -199,5 +205,20 @@
                 <p> DESIGN BY: WWW.BEKADES.COM </p>
             </div>
         </footer>
+	    
+	    
+	<script>
+            document.addEventListener("DOMContentLoaded", () => {
+                console.timeEnd("DOM");
+                blockBuilder(recDepth);
+            });
+        </script>
+
+        <script>
+            window.addEventListener('load', function() {
+                console.timeEnd("load");
+            });
+        </script>   
+	    
     </body>
 </html>
